@@ -1,95 +1,197 @@
+
+
+"use client";
+
+import { motion } from "framer-motion";
+
+const heroImage = "/images/book.jpg";
+
 export default function HomePage() {
+  const fadeUp = {
+    hidden: { opacity: 0, y: 18 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.55 } },
+  };
+
   return (
-    <main className="max-w-7xl mx-auto px-4 py-8 overflow-y-auto scrollbar-hide">
-      {/* ====== Home Content ====== */}
-      <section className="mb-10 mt-10">
-        <h1 className="text-3xl font-bold text-center mb-6">
-          SCHOLINT PUBLICATIONS
-        </h1> 
-        <div>
-          <h1 className="text-lg font-semibold mb-2">
-             About Scholint Publishers
+    <main className="pt-34 bg-[#F4F4F7]  min-h-screen">
+      <div className="max-w-[99vw] mx-auto px-4 pb-7">
+        {/* Hero Section */}
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          animate="show"
+          className="bg-white border border-[#e5d8ff] rounded-sm h-56 md:h-84 flex items-center justify-center overflow-hidden"
+        >
+          <img
+            src={heroImage}
+            alt="hero"
+            className="opacity-30 object-contain max-h-full"
+            style={{ maxWidth: "100%" }}
+          />
+        </motion.div>
 
-          </h1>
-          <p className="text-justify leading-5.5 mb-4">
-            Scholint Publishers is an independent, open-access publishing organization devoted to advancing academic scholarship and promoting the global dissemination of knowledge. Established with a commitment to research integrity and educational excellence, Scholint Publishers provides a credible platform for authors, educators, and researchers to publish and share their work with the wider academic community.
-We recognize that the foundation of academic progress lies in the free exchange of ideas. Through our publishing initiatives, we aim to bridge the gap between researchers and readers by ensuring that high-quality, peer-reviewed research remains accessible to everyone—irrespective of geographical or institutional limitations. <br />
-At Scholint Publishers, we believe that scholarly publishing is not merely a process of dissemination but a vital part of education and innovation. Our mission is to nurture an environment that values ethical publishing, editorial transparency, and academic rigor.
-Scholint Publishers supports the vision of a knowledge-based society where information flows freely to inspire innovation, critical thinking, and informed decision-making.
+        {/* Combined Content Box */}
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="mt-4 bg-[#dff1ff] border-[0.2px] rounded-sm p-6"
+        >
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+            {/* Left Content */}
+            <article className="lg:col-span-9">
+              <h2 className="text-3xl font-semibold text-[#1f6f6b] mb-3">
+                About Scholint Publishers
+              </h2>
+              <div className="h-0.5 w-full bg-[#f3c1b0] mb-4"></div>
 
-          </p>
-        </div>
+              <p className="text-sm text-gray-700 leading-6 mb-3">
+                Scholint Publishers is an independent, open-access publishing
+                organization devoted to advancing academic scholarship and
+                promoting the global dissemination of knowledge. Established
+                with a commitment to research integrity and educational
+                excellence, Scholint Publishers provides a credible platform for
+                authors, educators, and researchers to publish and share their
+                work with the wider academic community.
+              </p>
 
-        <div>
-          <h1 className="text-lg font-semibold mb-2">
-             Publications
+              <p className="text-sm text-gray-700 leading-6 mb-3">
+                We recognize that the foundation of academic progress lies in
+                the free exchange of ideas. Through our publishing initiatives,
+                we aim to bridge the gap between researchers and readers by
+                ensuring that high-quality, peer-reviewed research remains
+                accessible to everyone—irrespective of geographical or
+                institutional limitations.
+              </p>
 
-          </h1>
-          <p className="text-justify leading-5.5 mb-4">
-            Scholint Publishers currently publishes the International Journal of Pharmacy and Allied Fields (IJPAF) — an open-access, peer-reviewed journal that provides an international forum for the dissemination of research in pharmaceutical and allied sciences. IJPAF encourages submissions of original research articles, systematic reviews, and case studies that contribute to the scientific understanding and advancement of health-related fields. <br />
-As our featured journal, IJPAF reflects Scholint Publishers’ dedication to academic integrity and global research visibility. In the coming years, we plan to expand our publishing portfolio to include additional academic journals and books in various domains of science, technology, and healthcare education.
+              <p className="text-sm text-gray-700 leading-6 mb-3">
+                At Scholint Publishers, we believe that scholarly publishing is
+                not merely a process of dissemination but a vital part of
+                education and innovation. Our mission is to nurture an
+                environment that values ethical publishing, editorial
+                transparency, and academic rigor.
+              </p>
 
-          </p>
-        </div>
+              <p className="text-sm text-gray-700 leading-6 mb-3">
+                Scholint Publishers supports the vision of a knowledge-based
+                society where information flows freely to inspire innovation,
+                critical thinking, and informed decision-making.
+              </p>
 
-        <div>
-          <h1 className="text-lg font-semibold mb-2">
-              Open Access Statement
+              <h3 className="mt-6 text-lg font-medium text-gray-800">
+                Publications
+              </h3>
+              <p className="text-sm text-gray-700 leading-6 mt-2 mb-2">
+                Scholint Publishers currently publishes the International
+                Journal of Pharmacy and Allied Fields (IJPAF) — an open-access,
+                peer-reviewed journal...
+              </p>
 
+              <div className="mt-6">
+                <h3 className="mt-6 mb-2 text-lg font-medium text-gray-800">
+                Journals
+              </h3>
+                <ol className="list-decimal ml-5 text-sm text-gray-700 space-y-2">
+                  <li>
+                    Explore peer-reviewed journals across multiple disciplines.
+                  </li>
+                  <li>Submit your research work for publication.</li>
+                  <li>Access open-source academic papers and archives.</li>
+                  <li>
+                    Track upcoming journal release dates and announcements.
+                  </li>
+                  <li>Collaborate with international authors and reviewers.</li>
+                </ol>
+              </div>
+              <div className="mt-6">
+                <h3 className="mt-6 mb-2 text-lg font-medium text-gray-800">
+                Books
+              </h3>
+                <ol className="list-decimal ml-5 text-sm text-gray-700 space-y-2">
+                  <li>
+                    Explore peer-reviewed journals across multiple disciplines.
+                  </li>
+                  <li>Submit your research work for publication.</li>
+                  <li>Access open-source academic papers and archives.</li>
+                  <li>
+                    Track upcoming journal release dates and announcements.
+                  </li>
+                  <li>Collaborate with international authors and reviewers.</li>
+                </ol>
+              </div>
+            </article>
 
-          </h1>
-          <p className="text-justify leading-5.5 mb-4">
-           Scholint Publishers adheres to the principles of the open-access , ensuring that all published materials are freely available for reading and citation without subscription barriers. We believe open access accelerates academic growth, promotes cross-disciplinary collaboration, and enhances the reach and relevance of research outcomes. <br />
-All our publications are licensed under recognized Creative Commons licenses, allowing authors to retain ownership of their work while enabling broader dissemination and reuse for educational and research purposes. This model not only supports authors’ academic visibility but also ensures equitable access to scientific knowledge.
+            {/* Right Sidebar merged inside */}
+            <aside className="lg:col-span-3">
+              <div className="bg-[#dff1ff] border border-[#c3d9eb] rounded-sm p-4">
+                {/* top horizontal line */}
+                <div className="border-t-4 border-[#d0e3f4] w-full mb-4"></div>
 
+                <ul className="space-y-5 text-sm text-gray-800">
+                  {/* Editorial Board */}
+                  <li className="flex items-start gap-3 border-b border-[#c3d9eb] pb-3">
+                    <span className="mt-0.5 text-[#007f7a] text-lg">👥</span>
+                    <div>
+                      <div className="font-semibold">Editorial Board</div>
+                      <div className="text-xs text-gray-600">Membership</div>
+                    </div>
+                  </li>
 
-          </p>
-        </div>
+                  {/* Advertisement */}
+                  <li className="flex items-start gap-3 border-b border-[#c3d9eb] pb-3">
+                    <span className="mt-0.5 text-[#007f7a] text-lg">📢</span>
+                    <div className="font-semibold">Advertisement</div>
+                  </li>
 
-          <div>
-          <h1 className="text-lg font-semibold mb-2">
- Editorial and Ethical Standards
+                  {/* Author Registration */}
+                  <li className="flex items-start gap-3 border-b border-[#c3d9eb] pb-3">
+                    <span className="mt-0.5 text-[#007f7a] text-lg">✍️</span>
+                    <div className="font-semibold">Author Registration</div>
+                  </li>
 
+                  {/* Manuscript Submission */}
+                  <li className="flex items-start gap-3 border-b border-[#c3d9eb] pb-3">
+                    <span className="mt-0.5 text-[#007f7a] text-lg">📂</span>
+                    <div className="font-semibold">Manuscript Submission</div>
+                  </li>
 
-          </h1>
-          <p className="text-justify leading-5.5 mb-4">
-          Each submission to our journals undergoes a rigorous peer-review process conducted by qualified reviewers and supervised by our editorial board. We follow recognized international guidelines and uphold ethical publishing standards to ensure the authenticity, reliability, and quality of every publication.
-Our editors and reviewers are committed to fair evaluation, timely feedback, and constructive guidance to help authors refine their manuscripts. By maintaining editorial transparency and academic objectivity, we aim to build long-term trust within the research community.
+                  {/* Registered User Login */}
+                  <li className="flex items-start gap-3 border-b border-[#c3d9eb] pb-3">
+                    <span className="mt-0.5 text-[#007f7a] text-lg">🔐</span>
+                    <div className="font-semibold">Registered User Login</div>
+                  </li>
 
+                  {/* Publish Your Journal */}
+                  <li className="flex items-start gap-3 border-b border-[#c3d9eb] pb-3">
+                    <span className="mt-0.5 text-[#007f7a] text-lg">📚</span>
+                    <div className="font-semibold">Publish Your Journal</div>
+                  </li>
 
-          </p>
-        </div>
-        <p>
+                  {/* Current Issue */}
+                  <li className="flex items-start gap-3 border-b border-[#c3d9eb] pb-3">
+                    <span className="mt-0.5 text-[#007f7a] text-lg">📄</span>
+                    <div className="font-semibold">Access Current Issue</div>
+                  </li>
 
-In addition, we plan to collaborate with universities, research bodies, and industry partners to promote conferences, workshops, and knowledge-sharing events that encourage dialogue between theory and practice
-        </p>
-      </section>
+                  {/*  Open Access Statement */}
+                  <li className="flex items-start gap-3">
+                    <span className="mt-0.5 text-[#007f7a] text-lg">⚖️</span>
+                    <div className="font-semibold"> Open Access Statement</div>
+                  </li>
+                   {/* Publication Ethics */}
+                  <li className="flex items-start gap-3">
+                    <span className="mt-0.5 text-[#007f7a] text-lg">⚖️</span>
+                    <div className="font-semibold">Publication ethics</div>
+                  </li>
 
-      {/* ====== Journals Section ====== */}
-      <section className="mb-10">
-        <h2 className="text-2xl font-semibold mb-4 border-b-2 border-orange-400 inline-block">
-          Journals
-        </h2>
-       <ol className="list-decimal list-inside space-y-2">
-  <li>Explore peer-reviewed journals across multiple disciplines.</li>
-  <li>Submit your research work for publication.</li>
-  <li>Access open-source academic papers and archives.</li>
-  <li>Track upcoming journal release dates and announcements.</li>
-  <li>Collaborate with international authors and reviewers.</li>
-</ol>
-
-      </section>
-
-      {/* ====== Books Section ====== */}
-      <section className="mb-10">
-        <h2 className="text-2xl font-semibold mb-4 border-b-2 border-orange-400 inline-block">
-          Books
-        </h2>
-        <p className="text-gray-700">
-          Our books section is coming soon! Stay tuned for new releases,
-          e-books, and educational materials that will be available shortly.
-        </p>
-      </section>
+                 
+                </ul>
+              </div>
+            </aside>
+          </div>
+        </motion.div>
+      </div>
     </main>
   );
 }

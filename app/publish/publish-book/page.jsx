@@ -1,6 +1,20 @@
+"use client";
+
 import React from "react";
+import { motion } from "framer-motion";
 
 export default function page() {
+  // Page fade animation
+  const pageFade = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1, transition: { duration: 0.8 } },
+  };
+
+  // Fade-up animation
+  const fadeUp = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  };
   const sections1 = [
     {
       heading: "What We Publish",
@@ -122,81 +136,225 @@ export default function page() {
   ];
 
   return (
-    <main className="max-w-7xl mx-auto px-4 py-8">
-      {/* <h1 className="text-3xl font-bold mb-4 text-center">
-       Book publish
-      </h1> */}
+    // <main className="max-w-7xl mx-auto px-4 py-8">
+    //   {/* <h1 className="text-3xl font-bold mb-4 text-center">
+    //    Book publish
+    //   </h1> */}
 
-      <section className="mb-10 mt-10">
-        <h1 className="text-lg font-semibold mb-2">
-          Publish Your Book with Scholint Publishers
-        </h1>
-        <p className="text-justify leading-5.5 mb-4">
-          Scholint Publishers invites authors, educators, researchers, and
-          professionals to publish their academic and educational books with us.
-          We aim to provide a reliable platform for authors who wish to share
-          their knowledge, ideas, and research outcomes with a global audience.{" "}
-          <br />
-          Our publishing model focuses on quality, accessibility, and author
-          satisfaction — ensuring that every book we publish adds genuine value
-          to the academic and professional community.
-        </p>
-      </section>
+    //   <section className="mb-10 mt-10">
+    //     <h1 className="text-lg font-semibold mb-2">
+    //       Publish Your Book with Scholint Publishers
+    //     </h1>
+    //     <p className="text-justify leading-5.5 mb-4">
+    //       Scholint Publishers invites authors, educators, researchers, and
+    //       professionals to publish their academic and educational books with us.
+    //       We aim to provide a reliable platform for authors who wish to share
+    //       their knowledge, ideas, and research outcomes with a global audience.{" "}
+    //       <br />
+    //       Our publishing model focuses on quality, accessibility, and author
+    //       satisfaction — ensuring that every book we publish adds genuine value
+    //       to the academic and professional community.
+    //     </p>
+    //   </section>
 
-      {sections1.map((section, index) => (
-        <section key={index} className="space-y-2">
-          <h2 className="text-lg font-semibold">{section.heading}</h2>
+    //   {sections1.map((section, index) => (
+    //     <section key={index} className="space-y-2">
+    //       <h2 className="text-lg font-semibold">{section.heading}</h2>
 
-          <p className="text-justify">{section.paragraph}</p>
+    //       <p className="text-justify">{section.paragraph}</p>
 
-          {section.listType !== "none" &&
-            (section.listType === "ordered" ? (
-              <ol className="list-decimal list-inside">
-                {section.list.map((item, i) => (
-                  <li key={i}>{item}</li>
-                ))}
-              </ol>
-            ) : (
-              <ul className="list-disc list-inside">
-                {section.list.map((item, i) => (
-                  <li key={i}>{item}</li>
-                ))}
-              </ul>
-            ))}
+    //       {section.listType !== "none" &&
+    //         (section.listType === "ordered" ? (
+    //           <ol className="list-decimal list-inside">
+    //             {section.list.map((item, i) => (
+    //               <li key={i}>{item}</li>
+    //             ))}
+    //           </ol>
+    //         ) : (
+    //           <ul className="list-disc list-inside">
+    //             {section.list.map((item, i) => (
+    //               <li key={i}>{item}</li>
+    //             ))}
+    //           </ul>
+    //         ))}
 
-          <p className="text-justify mb-2">{section.afterListParagraph}</p>
-        </section>
-      ))}
+    //       <p className="text-justify mb-2">{section.afterListParagraph}</p>
+    //     </section>
+    //   ))}
 
-      <section className="space-y-4">
-        <h2 className="text-lg font-semibold">Start Your Publishing Journey</h2>
+    //   <section className="space-y-4">
+    //     <h2 className="text-lg font-semibold">Start Your Publishing Journey</h2>
 
-        <p className="text-justify">
-          If you are planning to publish a textbook, reference book, or research
-          monograph, we would be glad to assist you through each stage of the
-          publishing process.
-        </p>
+    //     <p className="text-justify">
+    //       If you are planning to publish a textbook, reference book, or research
+    //       monograph, we would be glad to assist you through each stage of the
+    //       publishing process.
+    //     </p>
 
-        <div className="bg-gray-100 p-3 rounded-md space-y-1">
-          <p className="font-medium">
-            📧 Submit your proposal:{" "}
-            <span className="font-semibold">books@scholintpublishers.com</span>
-          </p>
-          <p className="font-medium">
-            🌐 Visit:{" "}
-            <span className="font-semibold">www.scholintpublishers.com</span>
-          </p>
-        </div>
+    //     <div className="bg-gray-100 p-3 rounded-md space-y-1">
+    //       <p className="font-medium">
+    //         📧 Submit your proposal:{" "}
+    //         <span className="font-semibold">books@scholintpublishers.com</span>
+    //       </p>
+    //       <p className="font-medium">
+    //         🌐 Visit:{" "}
+    //         <span className="font-semibold">www.scholintpublishers.com</span>
+    //       </p>
+    //     </div>
 
-        <p className="text-justify">
-          Your ideas deserve to be read, shared, and cited.
-        </p>
+    //     <p className="text-justify">
+    //       Your ideas deserve to be read, shared, and cited.
+    //     </p>
 
-        <p className="text-justify">
-          Let Scholint Publishers help you bring your work to readers around the
-          world.
-        </p>
-      </section>
-    </main>
+    //     <p className="text-justify">
+    //       Let Scholint Publishers help you bring your work to readers around the
+    //       world.
+    //     </p>
+    //   </section>
+    // </main>
+     <motion.div
+      className="bg-[#F4F4F7] min-h-screen mt-27"
+      variants={pageFade}
+      initial="hidden"
+      animate="show"
+    >
+      <main className="max-w-7xl mx-auto px-4 py-10 mt-10">
+
+        {/* Top Section */}
+        <motion.section
+          className="mb-10 space-y-4"
+          variants={fadeUp}
+          initial="hidden"
+          animate="show"
+        >
+          <motion.h1
+            className="text-3xl font-semibold text-[#1f6f6b]"
+            variants={fadeUp}
+          >
+            Publish Your Book with Scholint Publishers
+          </motion.h1>
+
+          <div className="h-0.5 w-full bg-[#f3c1b0] mb-3"></div>
+
+          <motion.p className="text-justify leading-6" variants={fadeUp}>
+            Scholint Publishers invites authors, educators, researchers, and
+            professionals to publish their academic and educational books with us.
+            We aim to provide a reliable platform for authors who wish to share
+            their knowledge, ideas, and research outcomes with a global audience.
+            <br />
+            Our publishing model focuses on quality, accessibility, and author
+            satisfaction — ensuring that every book we publish adds genuine value
+            to the academic and professional community.
+          </motion.p>
+        </motion.section>
+
+        {/* Dynamically Rendered Sections */}
+        {sections1.map((section, index) => (
+          <motion.section
+            key={index}
+            className="space-y-3 mb-6"
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+          >
+            <motion.h2
+              className="text-xl font-semibold text-[#1f6f6b]"
+              variants={fadeUp}
+            >
+              {section.heading}
+            </motion.h2>
+
+            <motion.p className="text-justify" variants={fadeUp}>
+              {section.paragraph}
+            </motion.p>
+
+            {section.listType !== "none" &&
+              (section.listType === "ordered" ? (
+                <motion.ol
+                  className="list-decimal list-inside space-y-1"
+                  variants={fadeUp}
+                >
+                  {section.list.map((item, i) => (
+                    <motion.li
+                      key={i}
+                      whileHover={{ x: 5 }}
+                      className="transition"
+                    >
+                      {item}
+                    </motion.li>
+                  ))}
+                </motion.ol>
+              ) : (
+                <motion.ul
+                  className="list-disc list-inside space-y-1"
+                  variants={fadeUp}
+                >
+                  {section.list.map((item, i) => (
+                    <motion.li
+                      key={i}
+                      whileHover={{ x: 5 }}
+                      className="transition"
+                    >
+                      {item}
+                    </motion.li>
+                  ))}
+                </motion.ul>
+              ))}
+
+            <motion.p className="text-justify" variants={fadeUp}>
+              {section.afterListParagraph}
+            </motion.p>
+          </motion.section>
+        ))}
+
+        {/* Final Section */}
+        <motion.section
+          className="space-y-4 mt-8"
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+        >
+          <motion.h2
+            className="text-xl font-semibold text-[#1f6f6b]"
+            variants={fadeUp}
+          >
+            Start Your Publishing Journey
+          </motion.h2>
+
+          <motion.p className="text-justify" variants={fadeUp}>
+            If you are planning to publish a textbook, reference book, or research
+            monograph, we would be glad to assist you through each stage of the
+            publishing process.
+          </motion.p>
+
+          {/* Card Animation */}
+          <motion.div
+            className="bg-gray-100 p-4 rounded-md shadow-sm space-y-2"
+            variants={fadeUp}
+            whileHover={{ scale: 1.02 }}
+          >
+            <p className="font-medium">
+              📧 Submit your proposal:{" "}
+              <span className="font-semibold">books@scholintpublishers.com</span>
+            </p>
+            <p className="font-medium">
+              🌐 Visit:{" "}
+              <span className="font-semibold">www.scholintpublishers.com</span>
+            </p>
+          </motion.div>
+
+          <motion.p className="text-justify" variants={fadeUp}>
+            Your ideas deserve to be read, shared, and cited.
+          </motion.p>
+
+          <motion.p className="text-justify" variants={fadeUp}>
+            Let Scholint Publishers help you bring your work to readers around the
+            world.
+          </motion.p>
+        </motion.section>
+      </main>
+    </motion.div>
   );
 }

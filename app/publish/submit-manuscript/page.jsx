@@ -1,6 +1,19 @@
+"use client";
 import React from "react";
+import { motion } from "framer-motion";
 
 export default function page() {
+  // Page fade
+  const pageFade = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1, transition: { duration: 0.8 } },
+  };
+
+  // Fade up animation
+  const fadeUp = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  };
   const sections1 = [
     {
       heading: "Step 1: Prepare Your Paper",
@@ -88,251 +101,426 @@ export default function page() {
   ];
 
   const sections3 = [
-  {
-    heading: "1. Responsibilities of Authors",
-    paragraph:
-      "Authors are responsible for the accuracy, originality, and integrity of the content they submit. Before submitting a manuscript, authors should ensure the following:",
-    list: [
-      "The work is original and has not been published or submitted elsewhere.",
-      "All data, results, and figures are genuine and not fabricated or altered.",
-      "The manuscript properly cites all references, sources, and previous research used.",
-      "Any financial support or sponsorship is clearly disclosed.",
-      "The study has received all required ethical approvals, especially for research involving humans or animals.",
-      "All authors listed have contributed significantly to the research and approved the final manuscript.",
-      "No one who did not contribute intellectually should be added as an author."
-    ],
-    afterListParagraph:
-      "Submitting the same work to multiple journals or manipulating results to gain publication is considered unethical and will lead to rejection or blacklisting.",
-  },
+    {
+      heading: "1. Responsibilities of Authors",
+      paragraph:
+        "Authors are responsible for the accuracy, originality, and integrity of the content they submit. Before submitting a manuscript, authors should ensure the following:",
+      list: [
+        "The work is original and has not been published or submitted elsewhere.",
+        "All data, results, and figures are genuine and not fabricated or altered.",
+        "The manuscript properly cites all references, sources, and previous research used.",
+        "Any financial support or sponsorship is clearly disclosed.",
+        "The study has received all required ethical approvals, especially for research involving humans or animals.",
+        "All authors listed have contributed significantly to the research and approved the final manuscript.",
+        "No one who did not contribute intellectually should be added as an author.",
+      ],
+      afterListParagraph:
+        "Submitting the same work to multiple journals or manipulating results to gain publication is considered unethical and will lead to rejection or blacklisting.",
+    },
 
-  {
-    heading: "2. Plagiarism Policy",
-    paragraph:
-      "All submissions are checked for plagiarism using standard plagiarism detection software. Plagiarism includes:",
-    list: [
-      "Copying text, data, or ideas without proper citation.",
-      "Reusing portions of previously published work without permission (self-plagiarism).",
-      "Presenting others’ work as one’s own.",
-      "If plagiarism or unethical similarity is found during review, the paper will be rejected immediately."
-    ],
-    afterListParagraph:
-      "If discovered after publication, the article may be retracted and an official note of retraction will be issued.",
-  },
+    {
+      heading: "2. Plagiarism Policy",
+      paragraph:
+        "All submissions are checked for plagiarism using standard plagiarism detection software. Plagiarism includes:",
+      list: [
+        "Copying text, data, or ideas without proper citation.",
+        "Reusing portions of previously published work without permission (self-plagiarism).",
+        "Presenting others’ work as one’s own.",
+        "If plagiarism or unethical similarity is found during review, the paper will be rejected immediately.",
+      ],
+      afterListParagraph:
+        "If discovered after publication, the article may be retracted and an official note of retraction will be issued.",
+    },
 
-  {
-    heading: "3. Data and Image Integrity",
-    paragraph:
-      "Authors must ensure that the data presented in the manuscript are accurate and honestly obtained. Any modification of images, graphs, or figures must not alter the interpretation of results.",
-    list: [
-      "Keep all raw data and original images safely for verification if required.",
-      "Avoid using images taken from other sources without permission or citation.",
-      "Clearly label all figures, tables, and results."
-    ],
-    afterListParagraph:
-      "Falsification or manipulation of data will be treated as serious scientific misconduct.",
-  },
+    {
+      heading: "3. Data and Image Integrity",
+      paragraph:
+        "Authors must ensure that the data presented in the manuscript are accurate and honestly obtained. Any modification of images, graphs, or figures must not alter the interpretation of results.",
+      list: [
+        "Keep all raw data and original images safely for verification if required.",
+        "Avoid using images taken from other sources without permission or citation.",
+        "Clearly label all figures, tables, and results.",
+      ],
+      afterListParagraph:
+        "Falsification or manipulation of data will be treated as serious scientific misconduct.",
+    },
 
-  {
-    heading: "4. Authorship Criteria",
-    paragraph:
-      "Authorship should reflect actual intellectual contribution. To qualify as an author, a person must have participated in:",
-    list: [
-      "The design or concept of the study,",
-      "Data collection or analysis, and",
-      "Writing or revising the manuscript."
-    ],
-    afterListParagraph:
-      "Individuals who provided technical help or financial assistance should be acknowledged but not listed as authors. Any changes in authorship must be approved by all authors before acceptance.",
-  },
+    {
+      heading: "4. Authorship Criteria",
+      paragraph:
+        "Authorship should reflect actual intellectual contribution. To qualify as an author, a person must have participated in:",
+      list: [
+        "The design or concept of the study,",
+        "Data collection or analysis, and",
+        "Writing or revising the manuscript.",
+      ],
+      afterListParagraph:
+        "Individuals who provided technical help or financial assistance should be acknowledged but not listed as authors. Any changes in authorship must be approved by all authors before acceptance.",
+    },
 
-  {
-    heading: "5. Reviewer Responsibilities",
-    paragraph:
-      "Peer reviewers play a key role in maintaining the quality of published papers. Reviewers are expected to:",
-    list: [
-      "Provide fair, constructive, and timely feedback.",
-      "Evaluate manuscripts only in their area of expertise.",
-      "Maintain confidentiality of all manuscripts.",
-      "Not use any part of the reviewed content for personal benefit.",
-      "Inform the editor if they detect plagiarism or data falsification."
-    ],
-    afterListParagraph:
-      "Reviewers should decline to review if they have personal or professional conflicts of interest.",
-  },
+    {
+      heading: "5. Reviewer Responsibilities",
+      paragraph:
+        "Peer reviewers play a key role in maintaining the quality of published papers. Reviewers are expected to:",
+      list: [
+        "Provide fair, constructive, and timely feedback.",
+        "Evaluate manuscripts only in their area of expertise.",
+        "Maintain confidentiality of all manuscripts.",
+        "Not use any part of the reviewed content for personal benefit.",
+        "Inform the editor if they detect plagiarism or data falsification.",
+      ],
+      afterListParagraph:
+        "Reviewers should decline to review if they have personal or professional conflicts of interest.",
+    },
 
-  {
-    heading: "6. Editorial Responsibilities",
-    paragraph:
-      "Editors are responsible for ensuring a fair and transparent review process. They must:",
-    list: [
-      "Make decisions based solely on the quality and originality of the manuscript.",
-      "Maintain confidentiality throughout the process.",
-      "Ensure that the peer review is unbiased and ethical.",
-      "Take action on ethical concerns raised by reviewers or readers.",
-      "Publish corrections or retractions when necessary."
-    ],
-    afterListParagraph:
-      "Editorial decisions are not influenced by personal, political, or commercial factors.",
-  },
+    {
+      heading: "6. Editorial Responsibilities",
+      paragraph:
+        "Editors are responsible for ensuring a fair and transparent review process. They must:",
+      list: [
+        "Make decisions based solely on the quality and originality of the manuscript.",
+        "Maintain confidentiality throughout the process.",
+        "Ensure that the peer review is unbiased and ethical.",
+        "Take action on ethical concerns raised by reviewers or readers.",
+        "Publish corrections or retractions when necessary.",
+      ],
+      afterListParagraph:
+        "Editorial decisions are not influenced by personal, political, or commercial factors.",
+    },
 
-  {
-    heading: "7. Handling Misconduct",
-    paragraph:
-      "If unethical behavior or misconduct is suspected, the editorial office will investigate carefully. The steps may include:",
-    list: [
-      "Notifying the author(s) and requesting an explanation.",
-      "Examining all available evidence related to the issue.",
-      "Taking appropriate action, including rejection or retraction."
-    ],
-    afterListParagraph:
-      "All investigations are conducted confidentially and fairly.",
-    ordered: true   // ➝ IMPORTANT: this marks this step list as ordered (1,2,3)
-  },
+    {
+      heading: "7. Handling Misconduct",
+      paragraph:
+        "If unethical behavior or misconduct is suspected, the editorial office will investigate carefully. The steps may include:",
+      list: [
+        "Notifying the author(s) and requesting an explanation.",
+        "Examining all available evidence related to the issue.",
+        "Taking appropriate action, including rejection or retraction.",
+      ],
+      afterListParagraph:
+        "All investigations are conducted confidentially and fairly.",
+      ordered: true, // ➝ IMPORTANT: this marks this step list as ordered (1,2,3)
+    },
 
-  {
-    heading: "8. Retraction and Correction Policy",
-    paragraph:
-      "If a published paper is found to have ethical issues, a retraction notice will be issued. If errors do not affect the main findings, a correction will be published.",
-    list: [
-      "Retraction notices are issued for severe ethical violations.",
-      "Minor errors result in corrections or errata.",
-      "All notices remain part of the permanent record for transparency."
-    ],
-    afterListParagraph: "",
-  },
+    {
+      heading: "8. Retraction and Correction Policy",
+      paragraph:
+        "If a published paper is found to have ethical issues, a retraction notice will be issued. If errors do not affect the main findings, a correction will be published.",
+      list: [
+        "Retraction notices are issued for severe ethical violations.",
+        "Minor errors result in corrections or errata.",
+        "All notices remain part of the permanent record for transparency.",
+      ],
+      afterListParagraph: "",
+    },
 
-  {
-    heading: "9. Declaration of Ethical Compliance",
-    paragraph:
-      "By submitting a manuscript, authors confirm the following:",
-    list: [
-      "The work follows international research ethics.",
-      "All data and results are presented truthfully.",
-      "All authors agree to the submission and its content."
-    ],
-    afterListParagraph:
-      "This declaration is a mandatory part of the submission process.",
-  }
-];
-
+    {
+      heading: "9. Declaration of Ethical Compliance",
+      paragraph: "By submitting a manuscript, authors confirm the following:",
+      list: [
+        "The work follows international research ethics.",
+        "All data and results are presented truthfully.",
+        "All authors agree to the submission and its content.",
+      ],
+      afterListParagraph:
+        "This declaration is a mandatory part of the submission process.",
+    },
+  ];
 
   return (
-    <main className="max-w-7xl mx-auto px-4 py-8 space-y-7 mt-10">
-      <h1 className="text-3xl font-bold mb-4 text-center">
-        MANUSCRIPT SUBMISSION
-      </h1>
-      Manuscript Submission Process
-      <section>
-        {/* <h1 className="text-lg font-semibold mb-2">
-          About Scholint Publishers
-        </h1> */}
-        <p className="text-justify leading-5.5 mb-4">
-          Scholint Publishers welcomes the submission of original and
-          high-quality research manuscripts that contribute to the advancement
-          of scientific and educational knowledge. We are committed to providing
-          a transparent, efficient, and ethical publication process that ensures
-          the rapid and responsible dissemination of scholarly work. <br />
-          Currently, we invite submissions for our open-access journal, the
-          International Journal of Pharmacy and Allied Fields (IJPAF), which
-          publishes original research articles, reviews, and case studies in all
-          areas of pharmaceutical and allied sciences.
-        </p>
-      </section>
-      <section className="space-y-4">
-        <h1 className="text-lg font-semibold mb-2">Why Publish with Us</h1>
-        <p className=" text-justify">
-          At Scholint Publishers, we value the efforts of researchers and strive
-          to provide:
-        </p>
+    //     <main className="max-w-7xl mx-auto px-4 py-8 space-y-7 mt-10">
+    //       <h1 className="text-3xl font-bold mb-4 text-center">
+    //         MANUSCRIPT SUBMISSION
+    //       </h1>
+    //       Manuscript Submission Process
+    //       <section>
+    //         {/* <h1 className="text-lg font-semibold mb-2">
+    //           About Scholint Publishers
+    //         </h1> */}
+    //         <p className="text-justify leading-5.5 mb-4">
+    //           Scholint Publishers welcomes the submission of original and
+    //           high-quality research manuscripts that contribute to the advancement
+    //           of scientific and educational knowledge. We are committed to providing
+    //           a transparent, efficient, and ethical publication process that ensures
+    //           the rapid and responsible dissemination of scholarly work. <br />
+    //           Currently, we invite submissions for our open-access journal, the
+    //           International Journal of Pharmacy and Allied Fields (IJPAF), which
+    //           publishes original research articles, reviews, and case studies in all
+    //           areas of pharmaceutical and allied sciences.
+    //         </p>
+    //       </section>
+    //       <section className="space-y-4">
+    //         <h1 className="text-lg font-semibold mb-2">Why Publish with Us</h1>
+    //         <p className=" text-justify">
+    //           At Scholint Publishers, we value the efforts of researchers and strive
+    //           to provide:
+    //         </p>
 
-        <ul className="list-disc list-inside ">
-          <li>
-            Peer-Reviewed Quality: Every submission undergoes a thorough
-            double-blind peer-review by experts in the relevant field.
-          </li>
-          <li>
-            Open Access Visibility: Published articles are freely available
-            worldwide, ensuring maximum visibility and citation potential.
-          </li>
-          <li>
-            Fast and Transparent Processing: Our editorial team ensures timely
-            communication and efficient review timelines.
-          </li>
-          <li>
-            Author Support: From submission to publication, authors receive
-            continuous support from our editorial and technical teams.
-          </li>
-          <li>
-            Ethical Publishing Practices: We adhere to COPE and international
-            publishing standards to ensure fairness and credibility.
-          </li>
-        </ul>
-      </section>
-      <h1 className="text-3xl font-bold mb-4 text-center">
-        MANUSCRIPT SUBMISSION PROCESS
-      </h1>
-      {sections1.map((section, index) => (
-        <section key={index} className="space-y-2">
-          <h2 className="text-lg font-semibold">{section.heading}</h2>
+    //         <ul className="list-disc list-inside ">
+    //           <li>
+    //             Peer-Reviewed Quality: Every submission undergoes a thorough
+    //             double-blind peer-review by experts in the relevant field.
+    //           </li>
+    //           <li>
+    //             Open Access Visibility: Published articles are freely available
+    //             worldwide, ensuring maximum visibility and citation potential.
+    //           </li>
+    //           <li>
+    //             Fast and Transparent Processing: Our editorial team ensures timely
+    //             communication and efficient review timelines.
+    //           </li>
+    //           <li>
+    //             Author Support: From submission to publication, authors receive
+    //             continuous support from our editorial and technical teams.
+    //           </li>
+    //           <li>
+    //             Ethical Publishing Practices: We adhere to COPE and international
+    //             publishing standards to ensure fairness and credibility.
+    //           </li>
+    //         </ul>
+    //       </section>
+    //       <h1 className="text-3xl font-bold mb-4 text-center">
+    //         MANUSCRIPT SUBMISSION PROCESS
+    //       </h1>
+    //       {sections1.map((section, index) => (
+    //         <section key={index} className="space-y-2">
+    //           <h2 className="text-lg font-semibold">{section.heading}</h2>
 
-          <p className="text-justify">{section.paragraph}</p>
+    //           <p className="text-justify">{section.paragraph}</p>
 
-          {section.listType === "ordered" ? (
-            <ol className="list-decimal list-inside">
-              {section.list.map((item, i) => (
-                <li key={i}>{item}</li>
-              ))}
-            </ol>
-          ) : (
-            <ul className="list-disc list-inside">
-              {section.list.map((item, i) => (
-                <li key={i}>{item}</li>
-              ))}
-            </ul>
-          )}
+    //           {section.listType === "ordered" ? (
+    //             <ol className="list-decimal list-inside">
+    //               {section.list.map((item, i) => (
+    //                 <li key={i}>{item}</li>
+    //               ))}
+    //             </ol>
+    //           ) : (
+    //             <ul className="list-disc list-inside">
+    //               {section.list.map((item, i) => (
+    //                 <li key={i}>{item}</li>
+    //               ))}
+    //             </ul>
+    //           )}
 
-          <p className="text-justify">{section.afterListParagraph}</p>
-        </section>
-      ))}
-      <div className="space-y-1">
-        <p>📧 For submission-related queries, authors may contact:</p>
-        <p>editor@ijpaf.com | 🌐 www.ijpaf.com</p>
-      </div>
-     
+    //           <p className="text-justify">{section.afterListParagraph}</p>
+    //         </section>
+    //       ))}
+    //       <div className="space-y-1">
+    //         <p>📧 For submission-related queries, authors may contact:</p>
+    //         <p>editor@ijpaf.com | 🌐 www.ijpaf.com</p>
+    //       </div>
 
-      {sections2.map((item, index) => (
-        <div key={index} className="space-y-2 mb-2">
-          <h3 className="text-lg font-semibold">{item.heading}</h3>
-          <p className="text-justify">{item.paragraph}</p>
-        </div>
-      ))}
+    //       {sections2.map((item, index) => (
+    //         <div key={index} className="space-y-2 mb-2">
+    //           <h3 className="text-lg font-semibold">{item.heading}</h3>
+    //           <p className="text-justify">{item.paragraph}</p>
+    //         </div>
+    //       ))}
 
+    //       {sections3.map((section, index) => (
+    //   <section key={index} className="space-y-2">
+    //     <h2 className="text-lg font-semibold">{section.heading}</h2>
 
-      {sections3.map((section, index) => (
-  <section key={index} className="space-y-2">
-    <h2 className="text-lg font-semibold">{section.heading}</h2>
+    //     <p className="text-justify">{section.paragraph}</p>
 
-    <p className="text-justify">{section.paragraph}</p>
+    //     {/* Ordered list if ordered: true, else unordered */}
+    //     {section.ordered ? (
+    //       <ol className="list-decimal list-inside">
+    //         {section.list.map((item, i) => (
+    //           <li key={i}>{item}</li>
+    //         ))}
+    //       </ol>
+    //     ) : (
+    //       <ul className="list-disc list-inside">
+    //         {section.list.map((item, i) => (
+    //           <li key={i}>{item}</li>
+    //         ))}
+    //       </ul>
+    //     )}
 
-    {/* Ordered list if ordered: true, else unordered */}
-    {section.ordered ? (
-      <ol className="list-decimal list-inside">
-        {section.list.map((item, i) => (
-          <li key={i}>{item}</li>
+    //     <p className="text-justify">{section.afterListParagraph}</p>
+    //   </section>
+    // ))}
+
+    //     </main>
+    <motion.div
+      className="bg-[#F4F4F7] min-h-screen"
+      variants={pageFade}
+      initial="hidden"
+      animate="show"
+    >
+      <main className="max-w-7xl mx-auto px-4 py-10 space-y-7 mt-27">
+        {/* Main Heading */}
+         <motion.div variants={fadeUp}>
+                    <h2 className="text-3xl font-semibold text-[#1f6f6b] mb-3">
+                     Manuscript Submission
+                    </h2>
+                    <div className="h-0.5 w-full bg-[#f3c1b0] mb-4"></div>
+                  </motion.div>
+        
+
+        {/* Sub Text */}
+         <motion.h1 className="mt-6 mb-2 text-lg font-semibold text-gray-800" variants={fadeUp}>
+           Manuscript Submission Process
+          </motion.h1>
+        {/* First Section */}
+        <motion.section className="space-y-4" variants={fadeUp}>
+          <motion.p className="text-justify leading-6" variants={fadeUp}>
+            Scholint Publishers welcomes the submission of original and
+            high-quality research manuscripts that contribute to the advancement
+            of scientific and educational knowledge. We are committed to
+            providing a transparent, efficient, and ethical publication process
+            that ensures the rapid and responsible dissemination of scholarly
+            work.
+            <br />
+            Currently, we invite submissions for our open-access journal, the
+            International Journal of Pharmacy and Allied Fields (IJPAF), which
+            publishes research articles, reviews, and case studies in all areas
+            of pharmaceutical and allied sciences.
+          </motion.p>
+        </motion.section>
+
+        {/* Why Publish With Us */}
+        <motion.section className="space-y-4" variants={fadeUp}>
+          <motion.h1 className="mt-6 mb-2 text-lg font-semibold text-gray-800" variants={fadeUp}>
+            Why Publish with Us
+          </motion.h1>
+
+          <motion.p className="text-justify" variants={fadeUp}>
+            At Scholint Publishers, we value the efforts of researchers and
+            strive to provide:
+          </motion.p>
+
+          <motion.ul
+            className="list-disc list-inside space-y-1"
+            variants={fadeUp}
+          >
+            {[
+              "Peer-Reviewed Quality: Every submission undergoes a thorough double-blind review.",
+              "Open Access Visibility: Articles are freely available worldwide.",
+              "Fast & Transparent Processing: Timely editorial communication.",
+              "Author Support: Dedicated editorial and technical help.",
+              "Ethical Publishing Practices: Following COPE and international standards.",
+            ].map((item, i) => (
+              <motion.li
+                key={i}
+                whileHover={{ x: 6 }}
+                className="hover:text-[#1f6f6b] transition"
+              >
+                {item}
+              </motion.li>
+            ))}
+          </motion.ul>
+        </motion.section>
+
+        {/* Heading */}
+         <motion.div variants={fadeUp}>
+                    <h2 className="text-3xl font-semibold text-[#1f6f6b] mb-3">
+                     Manuscript Submission Process
+                    </h2>
+                    <div className="h-0.5 w-full bg-[#f3c1b0] mb-4"></div>
+                  </motion.div>
+
+        {/* sections1 */}
+        {sections1.map((section, index) => (
+          <motion.section key={index} className="space-y-2" variants={fadeUp}>
+            <motion.h2 className="text-lg font-semibold" variants={fadeUp}>
+              {section.heading}
+            </motion.h2>
+
+            <motion.p className="text-justify" variants={fadeUp}>
+              {section.paragraph}
+            </motion.p>
+
+            {section.listType === "ordered" ? (
+              <motion.ol
+                className="list-decimal list-inside space-y-1"
+                variants={fadeUp}
+              >
+                {section.list.map((item, i) => (
+                  <motion.li key={i} whileHover={{ x: 6 }}>
+                    {item}
+                  </motion.li>
+                ))}
+              </motion.ol>
+            ) : (
+              <motion.ul
+                className="list-disc list-inside space-y-1"
+                variants={fadeUp}
+              >
+                {section.list.map((item, i) => (
+                  <motion.li key={i} whileHover={{ x: 6 }}>
+                    {item}
+                  </motion.li>
+                ))}
+              </motion.ul>
+            )}
+
+            <motion.p className="text-justify" variants={fadeUp}>
+              {section.afterListParagraph}
+            </motion.p>
+          </motion.section>
         ))}
-      </ol>
-    ) : (
-      <ul className="list-disc list-inside">
-        {section.list.map((item, i) => (
-          <li key={i}>{item}</li>
+
+        {/* Contact Section */}
+        <motion.div className="space-y-1" variants={fadeUp}>
+          <p>📧 For submission-related queries, authors may contact:</p>
+          <p className="font-semibold">editor@ijpaf.com | 🌐 www.ijpaf.com</p>
+        </motion.div>
+
+        {/* sections2 */}
+        {sections2.map((item, index) => (
+          <motion.div key={index} className="space-y-2 mb-2" variants={fadeUp}>
+            <motion.h3 className="text-lg font-semibold" variants={fadeUp}>
+              {item.heading}
+            </motion.h3>
+            <motion.p className="text-justify" variants={fadeUp}>
+              {item.paragraph}
+            </motion.p>
+          </motion.div>
         ))}
-      </ul>
-    )}
 
-    <p className="text-justify">{section.afterListParagraph}</p>
-  </section>
-))}
+        {/* sections3 */}
+        {sections3.map((section, index) => (
+          <motion.section key={index} className="space-y-2" variants={fadeUp}>
+            <motion.h2 className="text-lg font-semibold" variants={fadeUp}>
+              {section.heading}
+            </motion.h2>
 
-    </main>
+            <motion.p className="text-justify" variants={fadeUp}>
+              {section.paragraph}
+            </motion.p>
+
+            {section.ordered ? (
+              <motion.ol
+                className="list-decimal list-inside space-y-1"
+                variants={fadeUp}
+              >
+                {section.list.map((item, i) => (
+                  <motion.li key={i} whileHover={{ x: 6 }}>
+                    {item}
+                  </motion.li>
+                ))}
+              </motion.ol>
+            ) : (
+              <motion.ul
+                className="list-disc list-inside space-y-1"
+                variants={fadeUp}
+              >
+                {section.list.map((item, i) => (
+                  <motion.li key={i} whileHover={{ x: 6 }}>
+                    {item}
+                  </motion.li>
+                ))}
+              </motion.ul>
+            )}
+
+            <motion.p className="text-justify" variants={fadeUp}>
+              {section.afterListParagraph}
+            </motion.p>
+          </motion.section>
+        ))}
+      </main>
+    </motion.div>
   );
 }
