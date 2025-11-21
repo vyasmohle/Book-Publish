@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import { FaChevronDown } from "react-icons/fa";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -13,7 +14,7 @@ export default function Navbar() {
 
   const navItems = [
     { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
+    { name: "About", path: "/#about" },
     { name: "Publish with us", dropdown: true },
     { name: "Browse Journals", path: "/journals" },
     { name: "Books", path: "/books" },
@@ -41,7 +42,7 @@ export default function Navbar() {
     <header className="w-full fixed top-0 left-0 z-50">
       {/* Top header: logo (left) + big title (right) */}
       <div
-        className="flex items-center justify-between bg-white border-b border-gray-200 px-4 md:px-8 py-0.5"
+        className="flex items-center justify-between bg-white border-b border-gray-200 px-4 md:px-8 "
         style={{ background: "#ffffff" }}
       >
         {/* Left: logo */}
@@ -87,9 +88,14 @@ export default function Navbar() {
                   <li key={item.name} className="relative" ref={dropdownRef}>
                     <button
                       onClick={() => setShowDropdown((s) => !s)}
-                      className="text-sm font-medium text-gray-800 hover:text-black transition"
+                      className="flex items-center gap-1 text-sm font-medium text-gray-800 hover:text-black transition"
                     >
                       {item.name}
+                      <FaChevronDown
+                        className={`transition-transform duration-200 w-2.5 mt-0.5 ml-0.5 ${
+                          showDropdown ? "rotate-180" : "rotate-0"
+                        }`}
+                      />
                     </button>
 
                     {/* dropdown menu */}

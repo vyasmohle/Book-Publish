@@ -22,7 +22,7 @@ export default function Page() {
       initial="hidden"
       animate="show"
     >
-      <main className="max-w-7xl mx-auto px-4 py-8 mt-22 space-y-10">
+      <main className="max-w-7xl mx-auto px-4 py-8 mt-19 space-y-10 pb-24">
         
         {/* ===== Section Wrapper ===== */}
         <motion.section
@@ -33,7 +33,7 @@ export default function Page() {
         >
           {/* Heading */}
           <motion.div variants={fadeUp}>
-            <h2 className="text-3xl font-semibold text-[#1f6f6b] mb-3">
+            <h2 className="text-4xl font-medium text-black mb-3">
               Advertise With Us
             </h2>
             <div className="h-0.5 w-full bg-[#f3c1b0] mb-4"></div>

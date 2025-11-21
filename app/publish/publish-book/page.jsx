@@ -213,7 +213,7 @@ export default function page() {
     //   </section>
     // </main>
      <motion.div
-      className="bg-[#F4F4F7] min-h-screen mt-27"
+      className="bg-[#F4F4F7] min-h-screen mt-27 pb-24"
       variants={pageFade}
       initial="hidden"
       animate="show"
@@ -228,7 +228,7 @@ export default function page() {
           animate="show"
         >
           <motion.h1
-            className="text-3xl font-semibold text-[#1f6f6b]"
+            className="text-4xl font-medium text-black"
             variants={fadeUp}
           >
             Publish Your Book with Scholint Publishers
@@ -259,7 +259,7 @@ export default function page() {
             viewport={{ once: true }}
           >
             <motion.h2
-              className="text-xl font-semibold text-[#1f6f6b]"
+              className="text-xl font-semibold text-black"
               variants={fadeUp}
             >
               {section.heading}
@@ -317,7 +317,7 @@ export default function page() {
           viewport={{ once: true }}
         >
           <motion.h2
-            className="text-xl font-semibold text-[#1f6f6b]"
+            className="text-2xl font-semibold text-black"
             variants={fadeUp}
           >
             Start Your Publishing Journey

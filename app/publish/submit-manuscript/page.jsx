@@ -349,10 +349,10 @@ export default function page() {
       initial="hidden"
       animate="show"
     >
-      <main className="max-w-7xl mx-auto px-4 py-10 space-y-7 mt-27">
+      <main className="max-w-7xl mx-auto px-4 py-10 space-y-7 mt-27 pb-24">
         {/* Main Heading */}
          <motion.div variants={fadeUp}>
-                    <h2 className="text-3xl font-semibold text-[#1f6f6b] mb-3">
+                    <h2 className="text-4xl font-medium text-black mb-3">
                      Manuscript Submission
                     </h2>
                     <div className="h-0.5 w-full bg-[#f3c1b0] mb-4"></div>
@@ -415,7 +415,7 @@ export default function page() {
 
         {/* Heading */}
          <motion.div variants={fadeUp}>
-                    <h2 className="text-3xl font-semibold text-[#1f6f6b] mb-3">
+                    <h2 className="text-4xl font-medium text-black mb-3">
                      Manuscript Submission Process
                     </h2>
                     <div className="h-0.5 w-full bg-[#f3c1b0] mb-4"></div>

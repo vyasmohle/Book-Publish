@@ -22,7 +22,7 @@ export default function HomePage() {
       initial="hidden"
       animate="show"
     >
-      <main className="max-w-7xl mx-auto px-4 py-8 mt-22">
+      <main className="max-w-7xl mx-auto px-4 py-8 mt-24 pb-24">
         <motion.section
           className="space-y-4 mt-10"
           variants={fadeUp}
@@ -31,9 +31,9 @@ export default function HomePage() {
         >
           {/* ====== Heading ====== */}
           <motion.div variants={fadeUp}>
-            <h2 className="text-3xl font-semibold text-[#1f6f6b] mb-3">
-              Publish Your Book With Us
-            </h2>
+           <h2 className="text-4xl font-medium text-black mb-3">
+               Publish Your Book with Us
+              </h2>
             <div className="h-0.5 w-full bg-[#f3c1b0] mb-4"></div>
           </motion.div>
 
