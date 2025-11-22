@@ -2,6 +2,8 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { MdEmail } from "react-icons/md";
+import { AiOutlineGlobal } from "react-icons/ai";
 
 export default function page() {
   // Page fade animation
@@ -335,12 +337,12 @@ export default function page() {
             variants={fadeUp}
             whileHover={{ scale: 1.02 }}
           >
-            <p className="font-medium">
-              📧 Submit your proposal:{" "}
+            <p className="font-medium flex items-center gap-2">
+              <MdEmail  className="text-black" /> Submit your proposal:{" "}
               <span className="font-semibold">books@scholintpublishers.com</span>
             </p>
-            <p className="font-medium">
-              🌐 Visit:{" "}
+            <p className="font-medium flex items-center gap-2">
+              <AiOutlineGlobal className="text-black" /> Visit:{" "}
               <span className="font-semibold">www.scholintpublishers.com</span>
             </p>
           </motion.div>

@@ -164,6 +164,7 @@ export default function BrowseJournalsPage() {
   const [selectedCategory, setSelectedCategory] = useState(null);
 
   const categories = [
+    "Pharmacy",
     "All Disciplines",
     "Biological Sciences",
     "Physical Sciences",
@@ -183,30 +184,8 @@ export default function BrowseJournalsPage() {
       desc: "Our featured publication, the International Journal of Pharmacy and Allied Fields (IJPAF), publishes innovative research in pharmaceutical and allied sciences.",
       image: "/mnt/data/Screenshot 2025-11-21 225713.png",
     },
-    {
-      id: 2,
-      title: "Journal of Advanced Engineering & Technology (JAET)",
-      category: "Engineering & Technology",
-      tag: "Engineering",
-      desc: "Publishes peer-reviewed papers focusing on innovations in mechanical, electrical, and computer engineering.",
-      image: "/mnt/data/Screenshot 2025-11-21 225713.png",
-    },
-    {
-      id: 3,
-      title: "International Journal of Environmental Studies (IJES)",
-      category: "Environmental Studies",
-      tag: "Environment",
-      desc: "Focuses on sustainable development, environmental science, and green technology research.",
-      image: "/mnt/data/Screenshot 2025-11-21 225713.png",
-    },
-    {
-      id: 4,
-      title: "Social Science Review (SSR)",
-      category: "Social Sciences",
-      tag: "Social",
-      desc: "Publishes studies and analyses related to human behavior, social change, and development.",
-      image: "/mnt/data/Screenshot 2025-11-21 225713.png",
-    },
+   
+  
   ];
 
   const filteredJournals = journals.filter((journal) => {

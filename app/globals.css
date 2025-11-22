@@ -1,8 +1,10 @@
 @import "tailwindcss";
 
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-montserrat: "Montserrat", sans-serif;
 }
 
 @theme inline {
@@ -16,6 +18,8 @@
   :root {
     --background: #ffffff;
     --foreground: #00000;
+  --font-montserrat: "Montserrat", sans-serif;
+
   }
 }
 

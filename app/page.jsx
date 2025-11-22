@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-const heroImage = "/images/book.jpg";
 import { IoPeopleSharp } from "react-icons/io5";
 import { RiAdvertisementFill, RiLoginBoxFill } from "react-icons/ri";
 import { MdAppRegistration } from "react-icons/md";
@@ -10,6 +9,9 @@ import { FaBookOpen, FaBalanceScale } from "react-icons/fa";
 import { SlBookOpen } from "react-icons/sl";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+
+const heroImage = "/images/banner.jpg";
+const Journals = "/images/journals.jpg";
 
 export default function HomePage() {
   const router = useRouter();
@@ -20,20 +22,19 @@ export default function HomePage() {
   };
 
   return (
-    <main className="pt-34  min-h-screen bg-[#F4F4F7] ">
+    <main className="pt-34  min-h-screen  bg-[#F4F4F7] ">
       <div className="max-w-[99vw] mx-auto px-4 pb-7 ">
         {/* Hero Section */}
         <motion.div
           variants={fadeUp}
           initial="hidden"
           animate="show"
-          className=" h-56 md:h-84 flex items-center justify-center overflow-hidden"
+          className="h-56 md:h-84 w-full flex items-center justify-center overflow-hidden"
         >
           <img
             src={heroImage}
             alt="hero"
-            className="opacity-30 object-contain max-h-full"
-            style={{ maxWidth: "100%" }}
+            className="w-full h-full object-cover"
           />
         </motion.div>
 
@@ -47,13 +48,13 @@ export default function HomePage() {
         >
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
             {/* Left Content */}
-            <article id="about" className="lg:col-span-9  scroll-mt-40">
+            <article id="about" className="lg:col-span-9 scroll-mt-40">
               <h2 className="text-4xl font-medium text-black mb-3">
                 About Scholint Publishers
               </h2>
               <div className="h-0.5 w-full bg-[#f3c1b0] mb-4"></div>
 
-              <p className="text-sm text-gray-700 leading-6 mb-3">
+              <p className="text-sm text-gray-900 leading-6 mb-3">
                 Scholint Publishers is an independent, open-access publishing
                 organization devoted to advancing academic scholarship and
                 promoting the global dissemination of knowledge. Established
@@ -63,7 +64,7 @@ export default function HomePage() {
                 work with the wider academic community.
               </p>
 
-              <p className="text-sm text-gray-700 leading-6 mb-3">
+              <p className="text-sm text-gray-900 leading-6 mb-3">
                 We recognize that the foundation of academic progress lies in
                 the free exchange of ideas. Through our publishing initiatives,
                 we aim to bridge the gap between researchers and readers by
@@ -72,7 +73,7 @@ export default function HomePage() {
                 institutional limitations.
               </p>
 
-              <p className="text-sm text-gray-700 leading-6 mb-3">
+              <p className="text-sm text-gray-900 leading-6 mb-3">
                 At Scholint Publishers, we believe that scholarly publishing is
                 not merely a process of dissemination but a vital part of
                 education and innovation. Our mission is to nurture an
@@ -80,26 +81,82 @@ export default function HomePage() {
                 transparency, and academic rigor.
               </p>
 
-              <p className="text-sm text-gray-700 leading-6 mb-3">
+              <p className="text-sm text-gray-900 leading-6 mb-3">
                 Scholint Publishers supports the vision of a knowledge-based
                 society where information flows freely to inspire innovation,
                 critical thinking, and informed decision-making.
               </p>
 
-              <h3 className="mt-6 text-lg font-medium text-gray-800">
+              <h3 className="mt-6 text-lg font-medium text-black">
                 Publications
               </h3>
-              <p className="text-sm text-gray-700 leading-6 mt-2 mb-2">
+              <p className="text-sm text-gray-900 leading-6 mt-2 mb-2">
                 Scholint Publishers currently publishes the International
                 Journal of Pharmacy and Allied Fields (IJPAF) — an open-access,
-                peer-reviewed journal...
+                peer-reviewed journal that provides an international forum for
+                the dissemination of research in pharmaceutical and allied
+                sciences. IJPAF encourages submissions of original research
+                articles, systematic reviews, and case studies that contribute
+                to the scientific understanding and advancement of
+                health-related fields.
+              </p>
+              <p className="text-sm text-gray-900 leading-6 mb-3">
+                As our featured journal, IJPAF reflects Scholint Publishers’
+                dedication to academic integrity and global research visibility.
+                In the coming years, we plan to expand our publishing portfolio
+                to include additional academic journals and books in various
+                domains of science, technology, and healthcare education.
+              </p>
+
+              <h3 className="mt-6 text-lg font-medium text-black">
+                Open Access Statement
+              </h3>
+              <p className="text-sm text-gray-900 leading-6 mt-2 mb-2">
+                Scholint Publishers adheres to the principles of open access,
+                ensuring that all published materials are freely available for
+                reading and citation without subscription barriers. We believe
+                open access accelerates academic growth, promotes
+                cross-disciplinary collaboration, and enhances the reach and
+                relevance of research outcomes.
+              </p>
+              <p className="text-sm text-gray-900 leading-6 mb-3">
+                All our publications are licensed under recognized Creative
+                Commons licenses, allowing authors to retain ownership of their
+                work while enabling broader dissemination and reuse for
+                educational and research purposes. This model not only supports
+                authors’ academic visibility but also ensures equitable access
+                to scientific knowledge.
+              </p>
+
+              <h3 className="mt-6 text-lg font-medium text-black">
+                Editorial and Ethical Standards
+              </h3>
+              <p className="text-sm text-gray-900 leading-6 mt-2 mb-2">
+                Each submission to our journals undergoes a rigorous peer-review
+                process conducted by qualified reviewers and supervised by our
+                editorial board. We follow recognized international guidelines
+                and uphold ethical publishing standards to ensure the
+                authenticity, reliability, and quality of every publication.
+              </p>
+              <p className="text-sm text-gray-900 leading-6 mb-3">
+                Our editors and reviewers are committed to fair evaluation,
+                timely feedback, and constructive guidance to help authors
+                refine their manuscripts. By maintaining editorial transparency
+                and academic objectivity, we aim to build long-term trust within
+                the research community.
+              </p>
+              <p className="text-sm text-gray-900 leading-6 mb-3">
+                In addition, we plan to collaborate with universities, research
+                bodies, and industry partners to promote conferences, workshops,
+                and knowledge-sharing events that encourage dialogue between
+                theory and practice.
               </p>
 
               <button
-                className=" text-white bg-[#0c58ca] rounded px-3 py-2 cursor-pointer font-medium mt-14"
-                onClick={() => router.push("/")}
+                className="text-white bg-[#0c58ca] rounded px-3 py-2 cursor-pointer font-medium mt-4"
+                onClick={() => router.push("/journals")}
               >
-                Publish a Book With Us
+                Explore our Journals
               </button>
             </article>
 
@@ -216,11 +273,11 @@ export default function HomePage() {
                   </Link>
                 </ul>
               </div>
-
-              <div className="w-80 h-90 bg-white border rounded border-gray-300 relative mt-7" ></div>
+              <div className="mt-7">
+                <h3>Space available for advertisement</h3>
+                <div className="w-80 h-90 bg-white border rounded border-gray-300 relative mt-1"></div>
+              </div>
             </aside>
-
-            
           </div>
         </motion.div>
 
@@ -237,28 +294,29 @@ export default function HomePage() {
             {/* Journals Section (Your card stays exactly as it is) */}
             <div className="grid md:grid-cols-3 w-[80%] gap-6">
               {/* Single Journal Card */}
-              <div className="border border-gray-300 rounded-xs shadow-sm p-4">
+              <div className="border border-gray-300 rounded-xs shadow-sm p-2 py-4">
                 <img
-                  src={heroImage}
+                  src={Journals}
                   alt="Journal Thumbnail"
-                  className="w-full h-56 object-cover rounded"
+                  className="w-full h-110 object-cover rounded"
                 />
 
                 <h4 className="mt-4 text-lg font-semibold">
-                  Journal of Environmental Sustainability
+                  International Journal of Pharmacy and Allied Fields (IJPAF)
                 </h4>
 
-                <p className="mt-2 text-sm w-[70%] text-gray-700">
-                  Dedicated to solutions for climate change, biodiversity
-                  conservation, sustainable resource management.
+                <p className="my-2 text-sm w-full text-gray-700">
+                  Our featured publication, the International Journal of Pharmacy and Allied Fields (IJPAF), publishes original research articles, review papers, and case studies that contribute to pharmaceutical sciences and related disciplines
                 </p>
 
-                <button
-                  className="mt-4 text-blue-600 cursor-pointer font-medium"
-                  onClick={() => router.push("/journals")}
+                <a
+                  href="https://ijpaf.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-3 text-blue-600 cursor-pointer font-medium "
                 >
                   Visit Journal
-                </button>
+                </a>
               </div>
             </div>
           </div>

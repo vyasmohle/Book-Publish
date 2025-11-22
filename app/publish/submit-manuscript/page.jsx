@@ -1,6 +1,8 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import { MdEmail } from "react-icons/md";
+import { AiOutlineGlobal } from "react-icons/ai";
 
 export default function page() {
   // Page fade
@@ -351,18 +353,20 @@ export default function page() {
     >
       <main className="max-w-7xl mx-auto px-4 py-10 space-y-7 mt-27 pb-24">
         {/* Main Heading */}
-         <motion.div variants={fadeUp}>
-                    <h2 className="text-4xl font-medium text-black mb-3">
-                     Manuscript Submission
-                    </h2>
-                    <div className="h-0.5 w-full bg-[#f3c1b0] mb-4"></div>
-                  </motion.div>
-        
+        <motion.div variants={fadeUp}>
+          <h2 className="text-4xl font-medium text-black mb-3">
+            Manuscript Submission
+          </h2>
+          <div className="h-0.5 w-full bg-[#f3c1b0] mb-4"></div>
+        </motion.div>
 
         {/* Sub Text */}
-         <motion.h1 className="mt-6 mb-2 text-lg font-semibold text-gray-800" variants={fadeUp}>
-           Manuscript Submission Process
-          </motion.h1>
+        <motion.h1
+          className="mt-6 mb-2 text-lg font-semibold text-gray-800"
+          variants={fadeUp}
+        >
+          Manuscript Submission Process
+        </motion.h1>
         {/* First Section */}
         <motion.section className="space-y-4" variants={fadeUp}>
           <motion.p className="text-justify leading-6" variants={fadeUp}>
@@ -382,7 +386,10 @@ export default function page() {
 
         {/* Why Publish With Us */}
         <motion.section className="space-y-4" variants={fadeUp}>
-          <motion.h1 className="mt-6 mb-2 text-lg font-semibold text-gray-800" variants={fadeUp}>
+          <motion.h1
+            className="mt-6 mb-2 text-lg font-semibold text-gray-800"
+            variants={fadeUp}
+          >
             Why Publish with Us
           </motion.h1>
 
@@ -414,12 +421,12 @@ export default function page() {
         </motion.section>
 
         {/* Heading */}
-         <motion.div variants={fadeUp}>
-                    <h2 className="text-4xl font-medium text-black mb-3">
-                     Manuscript Submission Process
-                    </h2>
-                    <div className="h-0.5 w-full bg-[#f3c1b0] mb-4"></div>
-                  </motion.div>
+        <motion.div variants={fadeUp}>
+          <h2 className="text-4xl font-medium text-black mb-3">
+            Manuscript Submission Process
+          </h2>
+          <div className="h-0.5 w-full bg-[#f3c1b0] mb-4"></div>
+        </motion.div>
 
         {/* sections1 */}
         {sections1.map((section, index) => (
@@ -464,8 +471,8 @@ export default function page() {
 
         {/* Contact Section */}
         <motion.div className="space-y-1" variants={fadeUp}>
-          <p>📧 For submission-related queries, authors may contact:</p>
-          <p className="font-semibold">editor@ijpaf.com | 🌐 www.ijpaf.com</p>
+          <p>  For submission-related queries, authors may contact:</p>
+          <p className="font-semibold"><MdEmail className="inline text-black" /> scholintpublishers@gmail.com | <AiOutlineGlobal className="inline text-black" /> www.scholintpublishers.com</p>
         </motion.div>
 
         {/* sections2 */}
@@ -520,6 +527,15 @@ export default function page() {
             </motion.p>
           </motion.section>
         ))}
+
+        <a
+          href="https://ijpaf.com/submit.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white bg-[#0c58ca] rounded px-3 py-2 cursor-pointer font-medium mt-5 inline-block"
+        >
+          Submit Manuscript
+        </a>
       </main>
     </motion.div>
   );

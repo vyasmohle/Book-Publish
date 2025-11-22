@@ -5,6 +5,14 @@ import { usePathname } from "next/navigation";
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { FaChevronDown } from "react-icons/fa";
+import { Montserrat } from "next/font/google";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-montserrat",
+  weight: ["400", "500", "600", "700"],
+});
+
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -46,7 +54,7 @@ export default function Navbar() {
         style={{ background: "#ffffff" }}
       >
         {/* Left: logo */}
-        <div className="flex items-center space-x-3">
+        {/* <div className="flex items-center space-x-3">
           <Link href="/">
             <img
               src="/images/Plogo.png"
@@ -54,18 +62,29 @@ export default function Navbar() {
               className="h-20 w-20 object-contain cursor-pointer"
             />
           </Link>
-        </div>
+        </div> */}
         {/* Right: big title (matches screenshot where title sits on right) */}
-        <div className="text-right">
-          <h1
-            className="font-extrabold text-2xl md:text-3xl"
-            style={{ color: ORANGE }}
-          >
-            Scholint Publisher
-          </h1>
-          <div className="text-sm text-gray-600 italic">
-            A peer-reviewed open access journal
+        <div className=" flex items-center relative left-[75%]">
+          <div className="flex items-center space-x-3">
+            <Link href="/">
+              <img
+                src="/images/logo-2.png"
+                alt="Logo"
+                className="h-20 w-31 object-cover cursor-pointer "
+              />
+            </Link>
           </div>
+        <div>
+            <h1
+            className="text-2xl font-sans md:text-3xl"
+            style={{  }}
+          >
+            <span className="font-sans font-semibold" >Scholint</span> Publisher
+          </h1>
+          <div className="text-sm text-gray-600 font-sans italic">
+            Publishing Thoughts into Reality
+          </div>
+        </div>
         </div>
       </div>
 

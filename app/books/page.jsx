@@ -60,8 +60,8 @@ export default function HomePage() {
             className="bg-gray-100 p-3 rounded-md cursor-pointer"
           >
             <p className="font-medium">
-              📘 Submit Your Proposal:{" "}
-              <span className="font-semibold">abc@gmail.com</span>
+               Submit Your Proposal:{" "}
+              <span className="font-semibold">scholintpublishers@gmail.com</span>
             </p>
           </motion.div>
 

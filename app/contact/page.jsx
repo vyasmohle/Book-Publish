@@ -19,9 +19,8 @@ export default function Page() {
           <p className="text-justify">
             Scholint Publishers
             <br />
-            [Your Office Address Here]
-            <br />
-            (You can update this with your actual office or correspondence address later.)
+            1651, IJPAF House Raipur, Chhattisgarh
+           
           </p>
         </div>
 
@@ -30,17 +29,12 @@ export default function Page() {
           <h3 className="text-lg font-semibold mb-2">Email:</h3>
           <ul className="list-disc list-inside space-y-1">
             <li>
-              <strong>General Enquiries:</strong> info@scholintpublishers.com
+               scholintpublishers@gmail.com
             </li>
             <li>
-              <strong>Journal Submissions:</strong> editor@ijpaf.com
+               editor.ijpaf@gmail.com(Journal)
             </li>
-            <li>
-              <strong>Book Proposals:</strong> books@scholintpublishers.com
-            </li>
-            <li>
-              <strong>Advertisements:</strong> ads@scholintpublishers.com
-            </li>
+           
           </ul>
         </div>
 
@@ -53,7 +47,8 @@ export default function Page() {
         {/* Phone Card */}
         <div>
           <h3 className="text-lg font-semibold mb-1">Phone (optional):</h3>
-          <p>+91-XXXXXXXXXX</p>
+          <p>+91 9617552159
+</p>
         </div>
 
         {/* Office Hours Card */}

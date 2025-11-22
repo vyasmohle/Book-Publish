@@ -23,7 +23,6 @@ export default function Page() {
       animate="show"
     >
       <main className="max-w-7xl mx-auto px-4 py-8 mt-19 space-y-10 pb-24">
-        
         {/* ===== Section Wrapper ===== */}
         <motion.section
           className="space-y-4 mt-10"
@@ -46,8 +45,8 @@ export default function Page() {
             whileHover={{ scale: 1.01 }}
             transition={{ type: "spring", stiffness: 80 }}
           >
-            Promote your brand, institution, or product to a focused audience of 
-            researchers, academicians, healthcare professionals, and students 
+            Promote your brand, institution, or product to a focused audience of
+            researchers, academicians, healthcare professionals, and students
             through Scholint Publishers.
           </motion.p>
 
@@ -58,8 +57,8 @@ export default function Page() {
             whileHover={{ scale: 1.01 }}
             transition={{ type: "spring", stiffness: 80 }}
           >
-            Our platform offers high visibility among readers and contributors 
-            from pharmacy, medical, life sciences, and allied fields through our 
+            Our platform offers high visibility among readers and contributors
+            from pharmacy, medical, life sciences, and allied fields through our
             journals and publications.
           </motion.p>
 
@@ -74,9 +73,9 @@ export default function Page() {
             transition={{ type: "spring", stiffness: 80 }}
           >
             <p className="font-medium">
-              📧 For Advertisement Enquiries:{" "}
+              For Advertisement Enquiries:{" "}
               <span className="font-semibold">
-                ads@scholintpublishers.com
+                scholintpublishers@gmail.com
               </span>
             </p>
           </motion.div>
