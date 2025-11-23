@@ -23,13 +23,13 @@ export default function BrowseJournalsPage() {
 
   return (
     <motion.div
-      className="flex flex-col md:flex-row bg-[#F4F4F7] min-h-screen mt-24 px-4 sm:px-6 md:px-8 pb-10"
+      className="flex flex-col md:flex-row bg-[#F4F4F7] min-h-screen mt-24 px-4 sm:px-6 md:px-8 pb-10 overflow-y-auto md:overflow-visible"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
+      transition={{ duration: 0.8, ease: 'easeOut' }}
     >
       {/* ===== Sidebar ===== */}
-      <aside className="md:w-64 bg-white p-6 shadow-md sticky top-[130px] h-fit rounded-lg mb-6 md:mb-0">
+      <aside className="md:w-64 bg-white p-6 shadow-md md:sticky md:top-[130px] h-fit rounded-lg mb-6 md:mb-0">
         <h2 className="text-xl font-semibold mb-3 text-gray-800">
           Browse by Category
         </h2>
@@ -55,23 +55,23 @@ export default function BrowseJournalsPage() {
       {/* ===== Main Content ===== */}
       <main className="flex-1 md:ml-8">
         {/* ===== Search Bar ===== */}
-        <div className="mb-6 md:mt-10">
+        <div className="mb-6 md:mt-10 mt-5">
           <div className="relative">
-            <span className="absolute inset-y-0 left-3 flex items-center text-gray-500">
+            <span className="absolute inset-y-0 left-3 flex items-center text-gray-500 pointer-events-none">
               <IoIosSearch className="h-5 w-5" />
             </span>
             <input
               type="text"
               placeholder="Search journals, topics, authors..."
-              className="w-full pl-10 pr-3 py-3 text-sm sm:text-base rounded-md border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#1f6f6b]"
+              className="w-full pl-10 pr-3 py-3 text-sm sm:text-base rounded-md border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#1f6f6b] bg-white"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />
           </div>
         </div>
 
-        {/* ===== Fixed Journal Box ===== */}
-        <div className="flex ">
+        {/* ===== Journal Box ===== */}
+        <div className="flex">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full sm:w-[80%] md:w-[60%] gap-6 justify-items-center">
             <a
               href="https://ijpaf.com/"
@@ -87,8 +87,6 @@ export default function BrowseJournalsPage() {
             </a>
           </div>
         </div>
-
-       
       </main>
     </motion.div>
   );

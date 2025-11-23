@@ -76,8 +76,8 @@ export default function Footer() {
             </li>
             <li>
               <Link
-                href="https://ijpaf.com/index.html"
-                target="_blank"
+                href=""
+                
                 className="hover:underline hover:text-black transition"
               >
                 Publish Your Journal

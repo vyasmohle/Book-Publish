@@ -366,19 +366,19 @@ export default function HomePage() {
   };
 
   return (
-    <main className="pt-32 min-h-screen bg-[#F4F4F7]">
+    <main className="md:pt-32 pt-29 min-h-screen bg-[#F4F4F7]">
       <div className="max-w-full">
         {/* ===== Hero Section ===== */}
         <motion.div
           variants={fadeUp}
           initial="hidden"
           animate="show"
-          className="h-56  md:h-98 w-full flex items-center justify-center overflow-hidden"
+          className="h-25   md:h-98 w-full flex items-center justify-center overflow-hidden"
         >
           <img
             src={heroImage}
             alt="hero"
-            className="w-full h-full object-cover"
+            className="w-full h-60 md:h-98 md:object-cover object-contain "
           />
         </motion.div>
 
@@ -539,14 +539,14 @@ export default function HomePage() {
 
         {/* ===== Featured Journals Section ===== */}
         <div className="pl-0 sm:pl-6 md:pl-10 bg-white pb-20 pt-5">
-          <div className="">
-            <h3 className="text-3xl sm:text-4xl font-medium text-gray-900 pt-7">
+          <div className="ml-4 md:ml-0">
+            <h3 className="text-3xl sm:text-4xl  font-medium text-gray-900 pt-7">
               Our Featured Journals
             </h3>
             <div className="h-[2px] w-[70%] bg-[#e4b199] mt-3 mb-8"></div>
 
             <div className="flex justify-center md:justify-start my-8">
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full md:w-[60%] gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full md:w-[49%] gap-6">
                 <a
                   href="https://ijpaf.com/"
                   target="_blank"
@@ -564,7 +564,7 @@ export default function HomePage() {
           </div>
 
           {/* ===== Books Section ===== */}
-          <div className="mt-10 msd:mb-5">
+          <div className="mt-10 msd:mb-5 ml-4 md:ml-0">
             <h3 className="text-3xl sm:text-4xl font-medium text-gray-900">
               Our Published Books
             </h3>
