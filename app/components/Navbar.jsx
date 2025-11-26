@@ -43,8 +43,8 @@ export default function Navbar() {
   return (
     <header className="w-full fixed top-0 left-0 z-50 bg-white shadow-sm">
       {/* ======= Top Bar ======= */}
-      <div className="flex items-center justify-between bg-white border-b border-gray-200 px-4 md:px-8">
-        <div className="flex items-center relative left-[74%]">
+      <div className="flex  items-center justify-between bg-white border-b border-gray-200 px-4 md:px-8">
+        <div className="flex items-center relative md:left-[74%] ">
           <div className="flex items-center space-x-3">
             <Link href="/">
               <img
