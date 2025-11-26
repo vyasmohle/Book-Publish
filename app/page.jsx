@@ -543,10 +543,10 @@ export default function HomePage() {
             <h3 className="text-3xl sm:text-4xl  font-medium text-gray-900 pt-7">
               Our Featured Journals
             </h3>
-            <div className="h-[2px] w-[70%] bg-[#e4b199] mt-3 mb-8"></div>
+            <div className="h-[2px] md:w-[70%] w-[90%] bg-[#e4b199] mt-3 mb-8"></div>
 
             <div className="flex justify-center md:justify-start my-8">
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full md:w-[49%] gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-[46%] md:w-[49%] gap-6">
                 <a
                   href="https://ijpaf.com/"
                   target="_blank"
@@ -568,7 +568,7 @@ export default function HomePage() {
             <h3 className="text-3xl sm:text-4xl font-medium text-gray-900">
               Our Published Books
             </h3>
-            <div className="h-[2px] w-[70%] bg-[#e4b199] mt-3 mb-8"></div>
+            <div className="h-[2px] md:w-[70%] w-[90%] bg-[#e4b199] mt-3 mb-8"></div>
 
             <button
               className="text-white bg-[#0c58ca] rounded px-4 py-2 cursor-pointer font-medium hover:bg-[#0947a8] transition"
