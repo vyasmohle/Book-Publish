@@ -82,7 +82,7 @@ export default function BrowseJournalsPage() {
               <img
                 src={Journals}
                 alt="Journal Thumbnail"
-                className="w-full h-80 md:h-82 sm:h-96 object-contain bg-white"
+                className="w-full h-60 sm:h-80 object-contain bg-white"
               />
             </a>
           </div>
