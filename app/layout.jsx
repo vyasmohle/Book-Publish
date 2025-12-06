@@ -23,19 +23,14 @@ export const metadata = {
   title: "Scholint Publishers",
   description:
     "Scholint Publishers — advancing academic publishing and global open access research.",
-  icons: {
-    icon: "/favicon.ico?v=5",
-    shortcut: "/favicon.ico?v=5",
-    apple: "/favicon.ico?v=5",
-  },
+  
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/favicon.ico?v=5" sizes="any" />
-        <link rel="apple-touch-icon" href="/favicon.ico?v=5" />
+        
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} antialiased bg-[#F4F4F7] flex flex-col min-h-screen`}
