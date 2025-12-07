@@ -45,7 +45,7 @@ export default function Page() {
         "ISBN and Copyright Registration: Each published book is assigned an ISBN and registered under the author’s copyright.",
         "Global Online Availability: Books are made available through online platforms for worldwide visibility and accessibility.",
         "Open Access Option: Authors can choose to make their books freely accessible online for greater reach and citation.",
-        "Transparent Process: We maintain clear communication at every stage — from proposal to publication.",
+        "Transparent Process: We maintain clear communication at every stage from proposal to publication.",
       ],
       afterListParagraph:
         "Our goal is to make the publishing experience smooth, transparent, and rewarding.",
@@ -162,7 +162,7 @@ export default function Page() {
             us. We aim to provide a reliable platform for authors who wish to
             share their knowledge, ideas, and research outcomes with a global
             audience. Our publishing model focuses on quality, accessibility, and
-            author satisfaction — ensuring that every book we publish adds
+            author satisfaction ensuring that every book we publish adds
             genuine value to the academic and professional community.
           </motion.p>
         </motion.section>

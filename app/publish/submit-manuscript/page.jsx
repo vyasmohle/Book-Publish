@@ -79,7 +79,7 @@ export default function Page() {
     {
       heading: "Step 5: Decision & Publication",
       paragraph:
-        "After peer review, the editorial board makes a final decision — acceptance, revision, or rejection. For accepted manuscripts:",
+        "After peer review, the editorial board makes a final decision acceptance, revision, or rejection. For accepted manuscripts:",
       listType: "unordered",
       list: [
         "The paper undergoes formatting, proofreading, and quality checks.",
@@ -100,7 +100,7 @@ export default function Page() {
     {
       heading: "Publication Ethics",
       paragraph:
-        "All parties — authors, reviewers, and editors — must follow ethical publishing practices. Every published paper should reflect genuine, original, and responsible research.",
+        "All parties authors, reviewers, and editors must follow ethical publishing practices. Every published paper should reflect genuine, original, and responsible research.",
     },
   ];
 
@@ -111,7 +111,7 @@ export default function Page() {
         "Authors must ensure accuracy, originality, and integrity of content. Before submission, authors should:",
       listType: "unordered",
       list: [
-        "Ensure originality — not published or submitted elsewhere.",
+        "Ensure originality not published or submitted elsewhere.",
         "Present genuine, unaltered data and results.",
         "Cite all sources correctly and disclose funding or sponsorship.",
         "Obtain ethical approvals when needed.",
@@ -185,9 +185,9 @@ export default function Page() {
             We ensure a transparent, ethical, and efficient publication process
             for authors worldwide.
             <br />
-            Submissions are invited for our open-access journal — the
+            Submissions are invited for our open-access journal the
             <strong> International Journal of Pharmacy and Allied Fields
-            (IJPAF)</strong> — covering all areas of pharmaceutical and allied
+            (IJPAF)</strong> covering all areas of pharmaceutical and allied
             sciences.
           </motion.p>
         </motion.section>
