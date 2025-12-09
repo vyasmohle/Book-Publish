@@ -51,6 +51,11 @@ export default function Page() {
           <div>
             <h3 className="text-base sm:text-lg font-semibold mb-1">Email:</h3>
             <p className="text-sm sm:text-base leading-relaxed">
+              director@scholintpublishers.com
+              <br />
+              info@scholintpublishers.com
+            </p>
+            <p className="text-sm sm:text-base leading-relaxed">
               scholintpublishers@gmail.com
               <br />
               editor.ijpaf@gmail.com (Journal)
